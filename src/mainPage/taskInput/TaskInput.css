@@ -1,0 +1,107 @@
+/* TaskInput.css */
+
+/* Font Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.task-input {
+    align-self: start;
+    background-color: #ffffff3c;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    max-width: 400px;
+}
+
+.task-input h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #555;
+    font-size: 16px;
+}
+
+.input-field,
+.textarea-field,
+.select-field {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textarea-field {
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    /* Limit maximum height */
+    resize: vertical;
+}
+
+.select-field {
+    appearance: none;
+    /* Removes default appearance */
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg fill="%23555" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3Cpath d="M0 0h24v24H0z" fill="none"/%3E%3C/svg%3E');
+    /* Custom arrow icon */
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+    /* Space for the arrow icon */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    /* Ensure select field takes full width */
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.tAndP {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+    .task-input {
+        max-width: 800px;
+        margin-bottom: 0px;
+    }
+
+}

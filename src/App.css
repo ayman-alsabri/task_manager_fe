@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.app {
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #414a53ef;
+  color: #fff;
+  display: flex;
+  padding: 4px 19px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.log-out {
+  color: #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.log-out:hover {
+  color: rgba(67, 150, 229, 0.895);
+  cursor: pointer;
+  transition-duration: 200ms;
+  transform: scale(1.05);
+
+
+}
+
+.main {
+  flex: 1;
+}
+
+.task-input {
+  margin-bottom: 1rem;
+}
+
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.task-item.completed {
+  background-color: #f0f0f0;
+}
+
+.task-item div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-dev {
+  display: grid;
+  grid-template-columns: auto 5fr;
+  justify-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-dev {
+
+    grid-template-columns: 1fr;
+
   }
+
+}
+
+#notification {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#notification.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
   to {
-    transform: rotate(360deg);
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
   }
 }

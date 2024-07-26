@@ -1,0 +1,134 @@
+/* src/AuthForm.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  padding: 0px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: calc(100% - 48px);
+}
+
+.auth-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth-box:hover {
+  transform: scale(1.01);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tabs button.active {
+  color: #000;
+  border-bottom: 2px solid #007bff;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.auth-form button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.password {
+  width: calc(100% - 1.5rem - 60px);
+  margin-right: 8px;
+}
+
+
+button.showPassword {
+  width: 50px;
+  font-size: 0.8rem;
+  background-color: transparent;
+  color: #007bff;
+}
+ button.showPassword:hover {
+  background-color: #0057b348;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .auth-box {
+    padding: 1rem;
+  }
+
+  .tabs button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .password {
+    width: calc(100% - 1rem - 50px);
+    margin-right: 5px;
+  }
+
+  .auth-form input,
+  .auth-form button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  button.showPassword {
+    width: 40px;
+    font-size: 0.6rem;
+  }
+}
