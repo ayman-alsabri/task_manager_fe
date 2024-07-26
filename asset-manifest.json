@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ayman-alsabri/task_manager_fe/static/css/main.36cf95f6.css",
+    "main.js": "/ayman-alsabri/task_manager_fe/static/js/main.48bd6172.js",
+    "static/js/453.86105b57.chunk.js": "/ayman-alsabri/task_manager_fe/static/js/453.86105b57.chunk.js",
+    "index.html": "/ayman-alsabri/task_manager_fe/index.html",
+    "main.36cf95f6.css.map": "/ayman-alsabri/task_manager_fe/static/css/main.36cf95f6.css.map",
+    "main.48bd6172.js.map": "/ayman-alsabri/task_manager_fe/static/js/main.48bd6172.js.map",
+    "453.86105b57.chunk.js.map": "/ayman-alsabri/task_manager_fe/static/js/453.86105b57.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36cf95f6.css",
+    "static/js/main.48bd6172.js"
+  ]
+}
